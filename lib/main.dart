@@ -55,7 +55,7 @@ class _CalculatorState extends State<Calculator> {
                                   setState(() => {firstNum = 1})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("1",
@@ -63,15 +63,15 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 80.0,
+                              height: 80.0,
                             )),
                         InkWell(
                             onTap: () => {
                                   setState(() => {firstNum = 2})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("2",
@@ -79,15 +79,15 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 80.0,
+                              height: 80.0,
                             )),
                         InkWell(
                             onTap: () => {
                                   setState(() => {firstNum = 3})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("3",
@@ -95,8 +95,26 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 80.0,
+                              height: 80.0,
+                            )),
+                        InkWell(
+                            onTap: () => {
+                                  print(total),
+                                  print(firstNum),
+                                  setState(() => {total = total + firstNum})
+                                },
+                            child: Container(
+                              margin: const EdgeInsets.all(11),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("+",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 80.0,
+                              height: 80.0,
                             )),
                       ],
                     ),
@@ -109,7 +127,7 @@ class _CalculatorState extends State<Calculator> {
                                   setState(() => {firstNum = 4})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("4",
@@ -117,15 +135,15 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 80.0,
+                              height: 80.0,
                             )),
                         InkWell(
                             onTap: () => {
                                   setState(() => {firstNum = 5})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("5",
@@ -133,15 +151,15 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 80.0,
+                              height: 80.0,
                             )),
                         InkWell(
                             onTap: () => {
                                   setState(() => {firstNum = 6})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("6",
@@ -149,9 +167,22 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 80.0,
+                              height: 80.0,
                             )),
+                        InkWell(
+                            child: Container(
+                          margin: const EdgeInsets.all(11),
+                          child: Align(
+                              alignment: Alignment.center,
+                              child: Text("-",
+                                  style: DefaultTextStyle.of(context)
+                                      .style
+                                      .apply(fontSizeFactor: 3.0))),
+                          color: Colors.red,
+                          width: 80.0,
+                          height: 80.0,
+                        )),
                       ],
                     ),
                   ),
@@ -163,7 +194,7 @@ class _CalculatorState extends State<Calculator> {
                                   setState(() => {firstNum = 7})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("7",
@@ -171,15 +202,15 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 80.0,
+                              height: 80.0,
                             )),
                         InkWell(
                             onTap: () => {
                                   setState(() => {firstNum = 8})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("8",
@@ -187,15 +218,15 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 80.0,
+                              height: 80.0,
                             )),
                         InkWell(
                             onTap: () => {
                                   setState(() => {firstNum = 9})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("9",
@@ -203,9 +234,22 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 80.0,
+                              height: 80.0,
                             )),
+                        InkWell(
+                            child: Container(
+                          margin: const EdgeInsets.all(11),
+                          child: Align(
+                              alignment: Alignment.center,
+                              child: Text("X",
+                                  style: DefaultTextStyle.of(context)
+                                      .style
+                                      .apply(fontSizeFactor: 3.0))),
+                          color: Colors.red,
+                          width: 80.0,
+                          height: 80.0,
+                        )),
                       ],
                     ),
                   ),
@@ -217,7 +261,7 @@ class _CalculatorState extends State<Calculator> {
                                   setState(() => {firstNum = 0})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("0",
@@ -225,39 +269,21 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
-                            )),
-                        InkWell(
-                            onTap: () => {
-                                  print(total),
-                                  print(firstNum),
-                                  setState(() => {total = total + firstNum})
-                                },
-                            child: Container(
-                              margin: const EdgeInsets.all(14),
-                              child: Align(
-                                  alignment: Alignment.center,
-                                  child: Text("+",
-                                      style: DefaultTextStyle.of(context)
-                                          .style
-                                          .apply(fontSizeFactor: 3.0))),
-                              color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 284.0,
+                              height: 80.0,
                             )),
                         InkWell(
                             child: Container(
-                          margin: const EdgeInsets.all(14),
+                          margin: const EdgeInsets.all(11),
                           child: Align(
                               alignment: Alignment.center,
-                              child: Text("-",
+                              child: Text("/",
                                   style: DefaultTextStyle.of(context)
                                       .style
                                       .apply(fontSizeFactor: 3.0))),
                           color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
+                          width: 80.0,
+                          height: 80.0,
                         )),
                       ],
                     ),
@@ -266,37 +292,11 @@ class _CalculatorState extends State<Calculator> {
                     child: Row(
                       children: <Widget>[
                         InkWell(
-                            child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("/",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
-                        InkWell(
-                            child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("X",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
-                        InkWell(
                             onTap: () => {
                                   setState(() => {total = 0, firstNum = 0})
                                 },
                             child: Container(
-                              margin: const EdgeInsets.all(14),
+                              margin: const EdgeInsets.all(11),
                               child: Align(
                                   alignment: Alignment.center,
                                   child: Text("C",
@@ -304,8 +304,24 @@ class _CalculatorState extends State<Calculator> {
                                           .style
                                           .apply(fontSizeFactor: 3.0))),
                               color: Colors.red,
-                              width: 110.0,
-                              height: 110.0,
+                              width: 182.0,
+                              height: 80.0,
+                            )),
+                        InkWell(
+                            onTap: () => {
+                                  setState(() => {total = 0, firstNum = 0})
+                                },
+                            child: Container(
+                              margin: const EdgeInsets.all(11),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("=",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 182.0,
+                              height: 80.0,
                             ))
                       ],
                     ),
