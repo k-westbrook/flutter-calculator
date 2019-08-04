@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 
 void main() {
   runApp(
@@ -9,14 +10,23 @@ void main() {
         appBar: AppBar(
           title: Text('Calculator'),
         ),
-        body: HelloRectangle(),
+        body: Calculator(),
       ),
     ),
   );
 }
 
-class HelloRectangle extends StatelessWidget {
+class Calculator extends StatefulWidget {
   @override
+  State<StatefulWidget> createState() {
+    return _CalculatorState();
+  }
+}
+
+class _CalculatorState extends State<Calculator> {
+  @override
+  num total = 0;
+  num firstNum = 0;
   Widget build(BuildContext context) {
     return Center(
       child: Container(
@@ -32,7 +42,7 @@ class HelloRectangle extends StatelessWidget {
                       margin: EdgeInsets.only(bottom: 20),
                       child: Align(
                           alignment: Alignment.centerRight,
-                          child: Text("Hi",
+                          child: Text(total.toString(),
                               style: DefaultTextStyle.of(context)
                                   .style
                                   .apply(fontSizeFactor: 5.0))),
@@ -41,44 +51,53 @@ class HelloRectangle extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 1})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("1",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("1",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 2})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("2",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("2",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 3})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("3",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("3",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                       ],
                     ),
                   ),
@@ -86,44 +105,53 @@ class HelloRectangle extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 4})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("4",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("4",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 5})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("5",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("5",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 6})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("6",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("6",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                       ],
                     ),
                   ),
@@ -131,44 +159,53 @@ class HelloRectangle extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 7})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("7",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("7",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 8})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("8",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("8",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 9})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("9",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("9",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                       ],
                     ),
                   ),
@@ -176,31 +213,39 @@ class HelloRectangle extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {firstNum = 0})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("0",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("0",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                         InkWell(
+                            onTap: () => {
+                                  print(total),
+                                  print(firstNum),
+                                  setState(() => {total = total + firstNum})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("+",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        )),
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("+",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            )),
                         InkWell(
                             child: Container(
                           margin: const EdgeInsets.all(14),
@@ -247,18 +292,21 @@ class HelloRectangle extends StatelessWidget {
                           height: 110.0,
                         )),
                         InkWell(
+                            onTap: () => {
+                                  setState(() => {total = 0, firstNum = 0})
+                                },
                             child: Container(
-                          margin: const EdgeInsets.all(14),
-                          child: Align(
-                              alignment: Alignment.center,
-                              child: Text("C",
-                                  style: DefaultTextStyle.of(context)
-                                      .style
-                                      .apply(fontSizeFactor: 3.0))),
-                          color: Colors.red,
-                          width: 110.0,
-                          height: 110.0,
-                        ))
+                              margin: const EdgeInsets.all(14),
+                              child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text("C",
+                                      style: DefaultTextStyle.of(context)
+                                          .style
+                                          .apply(fontSizeFactor: 3.0))),
+                              color: Colors.red,
+                              width: 110.0,
+                              height: 110.0,
+                            ))
                       ],
                     ),
                   ),
