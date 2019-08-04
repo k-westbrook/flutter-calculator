@@ -26,6 +26,7 @@ class Calculator extends StatefulWidget {
 class _CalculatorState extends State<Calculator> {
   @override
   num total = 0;
+  num displayedNum = 0;
   num firstNum = 0;
   Widget build(BuildContext context) {
     return Center(
@@ -42,7 +43,7 @@ class _CalculatorState extends State<Calculator> {
                       margin: EdgeInsets.only(bottom: 20),
                       child: Align(
                           alignment: Alignment.centerRight,
-                          child: Text(total.toString(),
+                          child: Text(displayedNum.toString(),
                               style: DefaultTextStyle.of(context)
                                   .style
                                   .apply(fontSizeFactor: 5.0))),
@@ -52,7 +53,9 @@ class _CalculatorState extends State<Calculator> {
                       children: <Widget>[
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 1})
+                                  print(1),
+                                  setState(
+                                      () => {displayedNum = 1, firstNum = 1})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -68,7 +71,8 @@ class _CalculatorState extends State<Calculator> {
                             )),
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 2})
+                                  setState(
+                                      () => {displayedNum = 2, firstNum = 2})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -84,7 +88,8 @@ class _CalculatorState extends State<Calculator> {
                             )),
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 3})
+                                  setState(
+                                      () => {displayedNum = 3, firstNum = 3})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -100,9 +105,10 @@ class _CalculatorState extends State<Calculator> {
                             )),
                         InkWell(
                             onTap: () => {
-                                  print(total),
-                                  print(firstNum),
-                                  setState(() => {total = total + firstNum})
+                                  setState(() => {
+                                        total = total + firstNum,
+                                        displayedNum = total
+                                      })
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -124,7 +130,8 @@ class _CalculatorState extends State<Calculator> {
                       children: <Widget>[
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 4})
+                                  setState(
+                                      () => {displayedNum = 4, firstNum = 4})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -140,7 +147,8 @@ class _CalculatorState extends State<Calculator> {
                             )),
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 5})
+                                  setState(
+                                      () => {displayedNum = 5, firstNum = 5})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -156,7 +164,8 @@ class _CalculatorState extends State<Calculator> {
                             )),
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 6})
+                                  setState(
+                                      () => {displayedNum = 6, firstNum = 6})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -191,7 +200,8 @@ class _CalculatorState extends State<Calculator> {
                       children: <Widget>[
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 7})
+                                  setState(
+                                      () => {displayedNum = 7, firstNum = 7})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -207,7 +217,8 @@ class _CalculatorState extends State<Calculator> {
                             )),
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 8})
+                                  setState(
+                                      () => {displayedNum = 8, firstNum = 8})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -223,7 +234,8 @@ class _CalculatorState extends State<Calculator> {
                             )),
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 9})
+                                  setState(
+                                      () => {displayedNum = 9, firstNum = 9})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -258,7 +270,8 @@ class _CalculatorState extends State<Calculator> {
                       children: <Widget>[
                         InkWell(
                             onTap: () => {
-                                  setState(() => {firstNum = 0})
+                                  setState(
+                                      () => {displayedNum = 0, firstNum = 0})
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -293,7 +306,11 @@ class _CalculatorState extends State<Calculator> {
                       children: <Widget>[
                         InkWell(
                             onTap: () => {
-                                  setState(() => {total = 0, firstNum = 0})
+                                  setState(() => {
+                                        total = 0,
+                                        firstNum = 0,
+                                        displayedNum = 0
+                                      })
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
@@ -309,7 +326,13 @@ class _CalculatorState extends State<Calculator> {
                             )),
                         InkWell(
                             onTap: () => {
-                                  setState(() => {total = 0, firstNum = 0})
+                                  print("="),
+                                  print(total),
+                                  setState(() => {
+                                        total = total + firstNum,
+                                        displayedNum = total,
+                                        firstNum = 0
+                                      })
                                 },
                             child: Container(
                               margin: const EdgeInsets.all(11),
